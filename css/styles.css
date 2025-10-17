@@ -21,11 +21,11 @@ body{
     justify-content: center;
     align-items: center;
     gap: 100px;
-    background-color: #f4f4f4;
     background-image: url('../img/dragon.avif');
     background-size: cover;
     background-repeat: no-repeat;
     /* como el fondo es muy intenso le añado transparencia */
+    backdrop-filter: blur(3px);
 
 }
 
