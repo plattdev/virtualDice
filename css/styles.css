@@ -1,0 +1,59 @@
+@import url(normalize.css);
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+.doto-500 {
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: bold;
+  font-variation-settings:
+    "ROND" 0;
+}
+
+/* General styles */
+
+body{
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-color: #f4f4f4;
+    background-image: url('../img/dragon.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* como el fondo es muy intenso le añado transparencia */
+
+}
+
+.zonaDado{ 
+    width: 200px;
+    height: 200px;
+    /* COMPROBACION CON CSS, pero lo queremos hacer con JS */
+    background-image: url('../img/dados.avif');
+    transition: background-position 0.3s ease-in-out;
+    /* dado 1 = 0px */
+    /* dado 2 = -355px */
+    /* dado 3 = -710px */
+    /* dado 4 = -1065px */
+    /* dado 5 = -1420px */
+    /* dado 6 = -1775px */
+}
+
+/* Button styles */
+.btn{
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #F67300;
+    color: white;
+    font-size: 30px;
+    font-family: "Doto", sans-serif;
+    
+    /* no tenemos href y hay que hacer que funcione como un enlace -> poner cursor pointer */
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    user-select: none; /* evitar que se seleccione el texto al hacer click */;
+}
