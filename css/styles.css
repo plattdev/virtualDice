@@ -21,20 +21,21 @@ body{
     justify-content: center;
     align-items: center;
     gap: 100px;
-    background-image: url('../img/dragon.avif');
-    background-size: cover;
+    background-image: linear-gradient(
+    rgba(107, 107, 107, 0.5),
+    rgba(107, 107, 107, 0.9)
+  ), url('../img/dragon.avif');
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
-    /* como el fondo es muy intenso le añado transparencia */
-    backdrop-filter: blur(3px);
-
 }
 
 .zonaDado{ 
     width: 200px;
     height: 200px;
-    /* COMPROBACION CON CSS, pero lo queremos hacer con JS */
     background-image: url('../img/dados.avif');
     transition: background-position 0.3s ease-in-out;
+    /* COMPROBACION CON CSS, pero lo hacemos con JS */
     /* dado 1 = 0px */
     /* dado 2 = -355px */
     /* dado 3 = -710px */
