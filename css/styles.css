@@ -21,27 +21,37 @@ body{
     justify-content: center;
     align-items: center;
     gap: 100px;
-    background-image: linear-gradient(
-    rgba(107, 107, 107, 0.5),
-    rgba(107, 107, 107, 0.9)
-  ), url('../img/dragon.avif');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url('../img/fondoMadera.jpeg');
+    
 }
 
 .zonaDado{ 
     width: 200px;
     height: 200px;
-    background-image: url('../img/dados.avif');
-    transition: background-position 0.3s ease-in-out;
-    /* COMPROBACION CON CSS, pero lo hacemos con JS */
-    /* dado 1 = 0px */
-    /* dado 2 = -355px */
-    /* dado 3 = -710px */
-    /* dado 4 = -1065px */
-    /* dado 5 = -1420px */
-    /* dado 6 = -1775px */
+
+    background-image: url('../img/dadoVector.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    /* box-shadow para el svg */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    /* se hace border radius porque el div es cuadrado */
+    border-radius: 40px; 
+
+
+
+    & h1.numerocara{
+      user-select: none;
+      font-size: 100px;
+      color: #333333;
+      font-family: "Doto", sans-serif;
+     
+    }
 }
 
 /* Button styles */

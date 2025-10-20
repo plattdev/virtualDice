@@ -20,7 +20,7 @@ let dado ={
     marca: ["Hasbro","WizDice","Chessex", "Q-Workshop","GameScience"],
     
     //MÉTODOS - FUNCIONALIDADES - para hacer cosas con el dado
-    tirar: function(caras=6) { //funcion sin nombre() pero con propiedades
+    tirar: function(caras=6) { //eliges las caras
         //si las caras no coinciden con las caras definidas en la propiedad caras, devolver un mensaje de error
         if (!this.caras.includes(caras)) {
             return "Error: el dado no tiene " + caras + " caras."
@@ -29,27 +29,16 @@ let dado ={
     }
 }
 
-
 //Conexiones con los ID del HTML.
 const zonaDado = document.getElementById('zonaDado') //div
 const boton = document.getElementById('boton') //<a>
 
-    
-//Creación de una constante mapa de todos los valores de posición del dado, numero que sale es un mov de la imagen
-const posicionesDado = new Map([
-    [1, "0px center"],
-    [2, "-350px center"],
-    [3, "-700px center"],
-    [4, "-1050px center"],
-    [5, "-1400px center"],
-    [6, "-1750px center"]
-])
 
-//eliminamos las funciones
 
-//Pulsar el botón y que se ejecute la función -> add event listener, pendiente de un click (en este caso), que ejecute la función tirarDado
-boton.addEventListener('click', function() {
-  //tirarDado() <- forma larga, de funcion dentro de funcion
-  const resultado = dado.tirar() //forma corta, llamar a la función directamente
-  zonaDado.style.backgroundPosition = posicionesDado.get(resultado)
+//hemos quitado boton y ahora el evento es al clicar en la zona del dado
+zonaDado.addEventListener('click', function() {
+  const resultado = dado.tirar() 
+  zonaDado.children[0].textContent = resultado;
+  //rotación del div (zonaDado) al tirar el dado
+  zonaDado.style.transform = "rotate(" + (Math.random() * 90) + "deg)";
 })
