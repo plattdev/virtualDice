@@ -54,17 +54,3 @@ body{
     }
 }
 
-/* Button styles */
-.btn{
-    padding: 15px 30px;
-    border-radius: 10px;
-    background-color: #F67300;
-    color: white;
-    font-size: 30px;
-    font-family: "Doto", sans-serif;
-    
-    /* no tenemos href y hay que hacer que funcione como un enlace -> poner cursor pointer */
-    cursor: pointer; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    user-select: none; /* evitar que se seleccione el texto al hacer click */;
-}

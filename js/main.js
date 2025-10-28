@@ -31,8 +31,6 @@ let dado ={
 
 //Conexiones con los ID del HTML.
 const zonaDado = document.getElementById('zonaDado') //div
-const boton = document.getElementById('boton') //<a>
-
 
 
 //hemos quitado boton y ahora el evento es al clicar en la zona del dado
